@@ -10,7 +10,70 @@ package ulohy;
 
 public class Sorty {
 
+    public static int[] mergeSort(int pole[]) {
+        double doublePole [] = mergeSort(intToDouble(pole));
+        pole = DoubleToInt(doublePole);
+        return pole;
+    }
 
+    public static double[] mergeSort(double pole[]) {
+        return pole;
+    }
+
+    public static int[] quickSort(int pole[]) {
+        double doublePole [] = quickSort(intToDouble(pole));
+        pole = DoubleToInt(doublePole);
+        return pole;
+    }
+
+    public static double[] quickSort(double pole[]) {
+
+        return pole;
+    }
+
+    public static int[] insertionSort(int pole[]) {
+        double doublePole [] = insertionSort(intToDouble(pole));
+        pole = DoubleToInt(doublePole);
+        return pole;
+    }
+
+    public static double[] insertionSort(double pole[]) {
+        for (int i = 0; i < pole.length - 1; i++) {
+            int j = i + 1;
+            double tmp = pole[j];
+            while(j > 0 && tmp > pole[j - 1]) {
+                pole[j] = pole[j - 1];
+                j--;
+            }
+            pole[j] = tmp;
+        }
+        return pole;
+    }
+
+    public static int[] selectionSort(int pole[]) {
+        double doublePole [] = selectionSort(intToDouble(pole));
+        pole = DoubleToInt(doublePole);
+        return pole;
+    }
+
+    public static double[] selectionSort(double pole[]) {
+        for (int i = 0; i < pole.length - 1; i++) {
+            int indexMaxCisla = i;
+            for (int j = i + 1; j < pole.length; j++) {
+                if( pole[j] > pole[indexMaxCisla]) indexMaxCisla = j;
+            }
+            double tmp = pole[i];
+            pole[i] = pole[indexMaxCisla];
+            pole[indexMaxCisla] = tmp;
+        }
+        return pole;
+    }
+
+    public static int[] bubbleSort(int pole[]) {
+        double doublePole [] = bubbleSort(intToDouble(pole));
+        pole = DoubleToInt(doublePole);
+        return pole;
+    }
 
     public static double[] bubbleSort(double pole[]) {
         boolean zmena = false;
@@ -26,5 +89,21 @@ public class Sorty {
             if (!zmena) break;
         }
         return pole;
+    }
+
+    private static int[] DoubleToInt(double pole[]) {
+        int intPole [] = new int[pole.length];
+        for (int i = 0; i < pole.length; i++) {
+            intPole[i] = (int) pole[i];
+        }
+        return intPole;
+    }
+
+    private static double[] intToDouble(int intPole[]) {
+        double doublePole [] = new double[intPole.length];
+        for (int i = 0; i < intPole.length; i++) {
+            doublePole[i] = intPole[i];
+        }
+        return doublePole;
     }
 }

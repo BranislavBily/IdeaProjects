@@ -28,7 +28,7 @@ public class ziaciZnamky_2 {
 
     public static double[][] zadanieZnamok(double[][] ziaci) {
         for (int i = 0; i < ziaci.length; i++) {
-            for (int j = 0; j < ziaci[i].length - 1; j++) {
+            for (int j = 0; j < ziaci[i].length; j++) {
                 i++;
                 j++;
                 System.out.printf("Zadajte %1d znamku %2d ziaka: ", i, j);
@@ -44,39 +44,45 @@ public class ziaciZnamky_2 {
         return ziaci;
     }
 
-    public static double[][] vypocetAP(double[][] ziaci) {
+    public static void vypis(double AP[]) {
+        for (int i = 0; i < AP.length; i++) {
+            System.out.printf("%1d ziak mal priemer %2.2f\n", i + 1, AP[i]);
+        }
+    }
+
+    public static double[] vypocetAP(double[][] ziaci) {
         double sucet, pocetZnamok;
+        double [] AP = new double[ziaci.length];
         for (int i = 0; i < ziaci.length; i++) {
             sucet = 0;
-            pocetZnamok = ziaci[i].length - 1;
+            pocetZnamok = ziaci[i].length;
             for (int j = 0; j < pocetZnamok; j++) {
                 sucet += ziaci[i][j];
             }
-            ziaci[i][ziaci[i].length - 1] = (double) Math.round(sucet / pocetZnamok * 100) / 100;
-            System.out.println(ziaci[i][ziaci[i].length - 1]);
+            AP[i] = (double) Math.round(sucet / pocetZnamok * 100) / 100;
+        }
+        return AP;
+    }
+
+    public static double[][] nacitaniePoctuZnamok(double ziaci[][]) {
+        for (int i = 0; i < ziaci.length; i++) {
+            i++;
+            System.out.printf("Nacitajte pocet znamok %1d ziaka: ", i);
+            i--;
+            int pocetZnamok = nacitanie();
+            ziaci[i] = new double[pocetZnamok];
         }
         return ziaci;
     }
 
     public static void main(String[] args) {
-        int skuska[] = {3, 1, 2, 5};
-        skuska = Sorty.insertionSort(skuska);
-        for (int cislo :
-                skuska) {
-            System.out.println(cislo);
-        }
         System.out.print("Nacitajte pocet deti: ");
         int pocetDeti = nacitanie();
         double ziaci[][] = new double[pocetDeti][];
-        for (int i = 0; i < ziaci.length; i++) {
-            i++;
-            System.out.printf("Nacitajte pocet znamok %1d ziaka: ", i);
-            i--;
-            // pridam este jeden prvok kde ulozim AP
-            int pocetZnamok = nacitanie() + 1;
-            ziaci[i] = new double[pocetZnamok];
-        }
+        ziaci = nacitaniePoctuZnamok(ziaci);
         ziaci = zadanieZnamok(ziaci);
-        ziaci = vypocetAP(ziaci);
+        double AP [] = vypocetAP(ziaci);
+        AP = Sorty.bubbleSortOdNajmensieho(AP);
+        vypis(AP);
     }
 }

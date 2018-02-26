@@ -10,21 +10,39 @@ package ulohy;
 
 public class Sorty {
 
-
-
-    public static double[] bubbleSort(double pole[]) {
-        boolean zmena = false;
-        for (int i = 0; i < pole.length - 1; i++) {
-            for (int j = 0; j < pole.length - i - 1; j++) {
-                if (pole[j] < pole[j + 1]) {
-                    double tmp = pole[j];
-                    pole[j] = pole[j + 1];
-                    pole[j + 1] = tmp;
-                    zmena = true;
+    public static double[] bubbleSort(double array[]) {
+        boolean change = false;
+        for (int i = 0; i < array.length - 1; i++) {
+            for (int j = 0; j < array.length - i - 1; j++) {
+                if (array[j] < array[j + 1]) {
+                    double tmp = array[j];
+                    array[j] = array[j + 1];
+                    array[j + 1] = tmp;
+                    change = true;
                 }
             }
-            if (!zmena) break;
+            if (!change) break;
         }
-        return pole;
+        return array;
+    }
+
+    public static int[] quicksort(int[] array, int leftBorder, int rightBorder){
+        if(leftBorder < rightBorder){
+            int boundary = leftBorder;
+            for(int i = leftBorder + 1; i < rightBorder; i++){
+                if(array[i] > array[leftBorder]){
+                    swap(array, i, ++boundary);
+                }
+            }
+            swap(array, leftBorder, boundary);
+            quicksort(array, leftBorder, boundary);
+            quicksort(array, boundary + 1, rightBorder);
+        }
+        return array;
+    }
+    public static void swap(int[] array, int leftIndex, int rightIndex){
+        int tmp = array[rightIndex];
+        array[rightIndex] = array[leftIndex];
+        array[leftIndex] = tmp;
     }
 }

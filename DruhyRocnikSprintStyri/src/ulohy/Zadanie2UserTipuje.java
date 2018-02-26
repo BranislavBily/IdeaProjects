@@ -1,3 +1,5 @@
+package ulohy;
+
 import java.io.*;
 
 public class Zadanie2UserTipuje {

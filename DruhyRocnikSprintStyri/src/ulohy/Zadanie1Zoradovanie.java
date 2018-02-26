@@ -1,3 +1,5 @@
+package ulohy;
+
 public class Zadanie1Zoradovanie {
 
     static int[] pole = new int[30];

@@ -1,3 +1,5 @@
+package ulohy;
+
 public class Vyhladavanie {
     public static int binarySearch(int[]  array, int leftIndex, int rightIndex, int value){
         if(leftIndex == rightIndex && array[leftIndex] != value) return -1;

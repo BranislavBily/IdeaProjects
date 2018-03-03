@@ -110,5 +110,6 @@ public class Pouzivam3Sorty_3 {
         B = vypocetVedlajsejDiagonaly(B);
         vypisovanie(B);
         System.out.println("Vedlajsia diagonala zmenena.");
+
     }
 }

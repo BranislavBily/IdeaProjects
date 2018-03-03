@@ -196,15 +196,13 @@ public class Sorty {
         return pole;
     }
 
-
-
     public static double[] reverseArray(double pole[]) {
         for(int i=0; i<pole.length/2; i++){
             double temp = pole[i];
             pole[i] = pole[pole.length -i -1];
             pole[pole.length -i -1] = temp;
         }
-    return pole;
+        return pole;
     }
 
     private static int[] DoubleToInt(double pole[]) {

@@ -1,7 +1,5 @@
 package ulohy;
 
-
-
 /**
  * Unauthorized copying of this file, via any medium is strictly prohibited
  * and will be punished
@@ -12,213 +10,39 @@ package ulohy;
 
 public class Sorty {
 
-    public static int[] mergeSortOdNajmensieho(int pole[]) {
-        double doublePole [] = mergeSortOdNajvacsieho(intToDouble(pole));
-        doublePole = reverseArray(doublePole);
-        pole = DoubleToInt(doublePole);
-        return pole;
-    }
-
-    public static double[] mergeSortOdNajmensieho(double pole[]) {
-        pole = mergeSortOdNajvacsieho(pole);
-        pole = reverseArray(pole);
-        return pole;
-    }
-
-    public static int[] mergeSortOdNajvacsieho(int pole[]) {
-        double doublePole [] = mergeSortOdNajvacsieho(intToDouble(pole));
-        pole = DoubleToInt(doublePole);
-        return pole;
-    }
-
-    public static double[] mergeSortOdNajvacsieho(double pole[]) {
-        int dlzka = pole.length;
-        if(dlzka < 2) return pole;
-        else {
-            int stred = dlzka / 2;
-            double vlavo[] = new double[stred];
-            double vpravo[] = new double[dlzka - stred];
-            for (int i = 0; i < stred - 1; i++) {
-                vlavo[i] = pole[i];
-            }
-            for (int i = stred; i < dlzka - 1; i++) {
-                vpravo[i - stred] = pole[i];
-            }
-            mergeSortOdNajvacsieho(vlavo);
-            mergeSortOdNajvacsieho(vpravo);
-        }
-        return pole;
-    }
-
-    public static int[] quickSortOdNajmensieho(int pole[], int start, int end) {
-        double doublePole [] = quickSortOdNajvacsieho(intToDouble(pole), start, end);
-        doublePole = reverseArray(doublePole);
-        pole = DoubleToInt(doublePole);
-        return pole;
-    }
-
-    public static double[] quickSortOdNajmensieho(double pole[], int start, int end) {
-        pole = quickSortOdNajvacsieho(pole, start, end);
-        pole = reverseArray(pole);
-        return pole;
-    }
-
-    public static int[] quickSortOdNajvacsieho(int pole[], int start, int end) {
-        double doublePole [] = quickSortOdNajvacsieho(intToDouble(pole), start, end);
-        pole = DoubleToInt(doublePole);
-        return pole;
-    }
-
-    public static double[] quickSortOdNajvacsieho(double pole[], int start, int end) {
-        int pIndex;
-        if (start < end) {
-            pIndex = partition(pole, start, end);
-            quickSortOdNajvacsieho(pole, start, pIndex - 1);
-            quickSortOdNajvacsieho(pole, pIndex + 1, end);
-        }
-        return pole;
-    }
-
-    public static int partition(double pole[], int start, int end) {
-        double pivot = pole[end], temp;
-        int pIndex;
-        pIndex = start;
-        for (int i = start; i < end; i++) {
-            if (pole[i] <= pivot) {
-                temp = pole[i];
-                pole[i] = pole[pIndex];
-                pole[pIndex] = temp;
-                pIndex = pIndex + 1;
-            }
-        }
-        temp = pole[pIndex];
-        pole[pIndex] = pole[end];
-        pole[end] = temp;
-        return pIndex;
-    }
-
-    public static int[] insertionSortOdNajmensieho(int pole[]) {
-        double doublePole [] = insertionSortOdNajvacsieho(intToDouble(pole));
-        doublePole = reverseArray(doublePole);
-        pole = DoubleToInt(doublePole);
-        return pole;
-    }
-
-    public static double[] insertionSortOdNajmensieho(double pole[]) {
-        pole = insertionSortOdNajvacsieho(pole);
-        pole = reverseArray(pole);
-        return pole;
-    }
-
-    public static int[] insertionSortOdNajvacsieho(int pole[]) {
-        double doublePole [] = insertionSortOdNajvacsieho(intToDouble(pole));
-        pole = DoubleToInt(doublePole);
-        return pole;
-    }
-
-    public static double[] insertionSortOdNajvacsieho(double pole[]) {
-        for (int i = 0; i < pole.length - 1; i++) {
-            int j = i + 1;
-            double tmp = pole[j];
-            while(j > 0 && tmp > pole[j - 1]) {
-                pole[j] = pole[j - 1];
-                j--;
-            }
-            pole[j] = tmp;
-        }
-        return pole;
-    }
-
-    public static int[] selectionSortOdNajmensieho(int pole[]) {
-        double doublePole [] = selectionSortOdNajvacsieho(intToDouble(pole));
-        doublePole = reverseArray(doublePole);
-        pole = DoubleToInt(doublePole);
-        return pole;
-    }
-
-    public static double[] selectionSortOdNajmensieho(double pole[]) {
-        pole = selectionSortOdNajvacsieho(pole);
-        pole = reverseArray(pole);
-        return pole;
-    }
-
-    public static int[] selectionSortOdNajvacsieho(int pole[]) {
-        double doublePole [] = selectionSortOdNajvacsieho(intToDouble(pole));
-        pole = DoubleToInt(doublePole);
-        return pole;
-    }
-
-    public static double[] selectionSortOdNajvacsieho(double pole[]) {
-        for (int i = 0; i < pole.length - 1; i++) {
-            int indexMaxCisla = i;
-            for (int j = i + 1; j < pole.length; j++) {
-                if( pole[j] > pole[indexMaxCisla]) indexMaxCisla = j;
-            }
-            double tmp = pole[i];
-            pole[i] = pole[indexMaxCisla];
-            pole[indexMaxCisla] = tmp;
-        }
-        return pole;
-    }
-
-    public static int[] bubbleSortOdNajmensieho(int pole[]) {
-        double doublePole [] = bubbleSortOdNajvacsieho(intToDouble(pole));
-        doublePole = reverseArray(doublePole);
-        pole = DoubleToInt(doublePole);
-        return pole;
-    }
-
-    public static double[] bubbleSortOdNajmensieho(double pole[]) {
-        pole = bubbleSortOdNajvacsieho(pole);
-        pole = reverseArray(pole);
-        return pole;
-    }
-
-    public static int[] bubbleSortOdNajvacsieho(int pole[]) {
-        double doublePole [] = bubbleSortOdNajvacsieho(intToDouble(pole));
-        pole = DoubleToInt(doublePole);
-        return pole;
-    }
-
-    public static double[] bubbleSortOdNajvacsieho(double pole[]) {
-        boolean zmena = false;
-        for (int i = 0; i < pole.length - 1; i++) {
-            for (int j = 0; j < pole.length - i - 1; j++) {
-                if (pole[j] < pole[j + 1]) {
-                    double tmp = pole[j];
-                    pole[j] = pole[j + 1];
-                    pole[j + 1] = tmp;
-                    zmena = true;
+    public static double[] bubbleSort(double array[]) {
+        boolean change = false;
+        for (int i = 0; i < array.length - 1; i++) {
+            for (int j = 0; j < array.length - i - 1; j++) {
+                if (array[j] < array[j + 1]) {
+                    double tmp = array[j];
+                    array[j] = array[j + 1];
+                    array[j + 1] = tmp;
+                    change = true;
                 }
             }
-            if (!zmena) break;
+            if (!change) break;
         }
-        return pole;
+        return array;
     }
 
-    public static double[] reverseArray(double pole[]) {
-        for(int i=0; i<pole.length/2; i++){
-            double temp = pole[i];
-            pole[i] = pole[pole.length -i -1];
-            pole[pole.length -i -1] = temp;
+    public static int[] quicksort(int[] array, int leftBorder, int rightBorder){
+        if(leftBorder < rightBorder){
+            int boundary = leftBorder;
+            for(int i = leftBorder + 1; i < rightBorder; i++){
+                if(array[i] > array[leftBorder]){
+                    swap(array, i, ++boundary);
+                }
+            }
+            swap(array, leftBorder, boundary);
+            quicksort(array, leftBorder, boundary);
+            quicksort(array, boundary + 1, rightBorder);
         }
-        return pole;
+        return array;
     }
-
-    private static int[] DoubleToInt(double pole[]) {
-        int intPole [] = new int[pole.length];
-        for (int i = 0; i < pole.length; i++) {
-            intPole[i] = (int) pole[i];
-        }
-        return intPole;
+    public static void swap(int[] array, int leftIndex, int rightIndex){
+        int tmp = array[rightIndex];
+        array[rightIndex] = array[leftIndex];
+        array[leftIndex] = tmp;
     }
-
-    private static double[] intToDouble(int intPole[]) {
-        double doublePole [] = new double[intPole.length];
-        for (int i = 0; i < intPole.length; i++) {
-            doublePole[i] = intPole[i];
-        }
-        return doublePole;
-    }
-
 }

@@ -26,7 +26,27 @@ public class Sorty {
         return array;
     }
 
-    public static int[] quicksort(int[] array, int leftBorder, int rightBorder){
+    public static int[] bubbleSort(int array[]) {
+        double doubleArray[] = intToDouble(array);
+        doubleArray = bubbleSort(doubleArray);
+        array = doubleToInt(doubleArray);
+        return array;
+    }
+
+    public static int[] bubbleSortAscendingInt(int array[]) {
+        array = bubbleSort(array);
+        double doubleArray[] = intToDouble(array);
+        doubleArray = reverseArray(doubleArray);
+        array = doubleToInt(doubleArray);
+        return array;
+    }
+
+    public static double[] bubbleSortAscending(double array[]) {
+        array = bubbleSort(array);
+        return reverseArray(array);
+    }
+
+    public static int[] quickSort(int[] array, int leftBorder, int rightBorder){
         if(leftBorder < rightBorder){
             int boundary = leftBorder;
             for(int i = leftBorder + 1; i < rightBorder; i++){
@@ -35,14 +55,75 @@ public class Sorty {
                 }
             }
             swap(array, leftBorder, boundary);
-            quicksort(array, leftBorder, boundary);
-            quicksort(array, boundary + 1, rightBorder);
+            quickSort(array, leftBorder, boundary);
+            quickSort(array, boundary + 1, rightBorder);
         }
         return array;
     }
+
     public static void swap(int[] array, int leftIndex, int rightIndex){
         int tmp = array[rightIndex];
         array[rightIndex] = array[leftIndex];
         array[leftIndex] = tmp;
     }
+
+    public static int[] insertionSort(int array[]) {
+        for (int i = 0; i < array.length - 1; i++) {
+            int j = i + 1;
+            int tmp = array[j];
+            while (j > 0 && tmp > array[j-1]) {
+                array[j] = array[j-1];
+                j--;
+            }
+            array[j] = tmp;
+        }
+        return array;
+    }
+
+    public static int[] inertionSortAscending(int array[]) {
+        array = insertionSort(array);
+        double doubleArray[] = intToDouble(array);
+        doubleArray = reverseArray(doubleArray);
+        array = doubleToInt(doubleArray);
+        return array;
+    }
+
+    public static int[] selectionSort(int array[]) {
+        for (int i = 0; i < array.length - 1; i++) {
+            int maxIndex = i;
+            for (int j = i + 1; j < array.length; j++) {
+                if (array[j] > array[maxIndex]) maxIndex = j;
+            }
+            int tmp = array[i];
+            array[i] = array[maxIndex];
+            array[maxIndex] = tmp;
+        }
+        return array;
+    }
+
+    public static int[] doubleToInt(double array[]) {
+        int intArray[] = new int[array.length];
+        for (int i = 0; i < array.length; i++) {
+            intArray[i] = (int) array[i];
+        }
+        return intArray;
+    }
+
+    public static double[] intToDouble(int array[]) {
+        double doubleArray[] = new double[array.length];
+        for (int i = 0; i < array.length; i++) {
+            doubleArray[i] = (double) array[i];
+        }
+        return doubleArray;
+    }
+
+    public static double[] reverseArray(double array[]) {
+        for (int i = 0; i < array.length / 2; i++) {
+            double temp = array[i];
+            array[i] = array[array.length - 1 - i];
+            array[array.length - 1 - i] = temp;
+        }
+        return array;
+    }
+
 }

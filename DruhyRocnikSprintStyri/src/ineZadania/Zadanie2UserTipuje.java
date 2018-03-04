@@ -38,7 +38,7 @@ public class Zadanie2UserTipuje {
     public static boolean checkingHisQuess() throws IOException {
         System.out.print("Input your guess: ");
         int guess = Integer.parseInt(br.readLine());
-        int index = Vyhladavania.binarySearch(array, 0, array.length, guess);
+        int index = Vyhladavania.binarySearchInt(array, 0, array.length, guess);
         if( index == -1 ) {
             System.out.printf("Your guess %2d was not found in a array. \n", guess);
             return false;

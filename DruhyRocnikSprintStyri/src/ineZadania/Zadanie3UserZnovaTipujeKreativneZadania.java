@@ -18,7 +18,7 @@ public class Zadanie3UserZnovaTipujeKreativneZadania {
         int sizeOfArray = 10;
         int InputtedNumbers[] = inputFromUser(sizeOfArray);
         output(InputtedNumbers);
-        InputtedNumbers = Sorty.quickSortOdNajmensieho(InputtedNumbers, 0, InputtedNumbers.length - 1);
+        InputtedNumbers = Sorty.quickSort(InputtedNumbers, 0, InputtedNumbers.length);
         output(InputtedNumbers);
         userPlaysFunGameNow(InputtedNumbers);
     }
@@ -45,7 +45,7 @@ public class Zadanie3UserZnovaTipujeKreativneZadania {
     public static void userPlaysFunGameNow(int array[]) throws IOException {
         int inputtedNumber;
         while((inputtedNumber = Integer.parseInt(br.readLine())) > 0) {
-            int indexOfFoundNumber = Vyhladavania.binarySearch(array, 0, array.length - 1, inputtedNumber );
+            int indexOfFoundNumber = Vyhladavania.binarySearchInt(array, 0, array.length - 1, inputtedNumber );
             if(indexOfFoundNumber == -1) {
                 System.out.println("Your number was no found in a array.");
             } else {

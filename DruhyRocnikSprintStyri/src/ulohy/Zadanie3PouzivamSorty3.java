@@ -11,7 +11,7 @@ import java.io.InputStreamReader;
  * Created by Branislav Bilý on 09.02.2018
  * If you are confused, feel free to ask me <branislav.bily@gmail.com>
  */
-public class Pouzivam3Sorty_3 {
+public class Zadanie3PouzivamSorty3 {
 
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
@@ -55,7 +55,7 @@ public class Pouzivam3Sorty_3 {
         for (int i = 0; i < pole.length; i++) {
             diagonala[i] = pole[i][i];
         }
-        diagonala = Sorty.insertionSortOdNajvacsieho(diagonala);
+        diagonala = Sorty.insertionSort(diagonala);
         pole = vratenieDiagonalyDoPola(pole, diagonala);
         return pole;
     }
@@ -76,7 +76,7 @@ public class Pouzivam3Sorty_3 {
             j++;
             index++;
         }
-        diagonaly = Sorty.selectionSortOdNajvacsieho(diagonaly);
+        diagonaly = Sorty.selectionSort(diagonaly);
         pole = vratenieVedlajsejDiagonalyDoPola(pole, diagonaly);
         return pole;
     }
@@ -98,11 +98,11 @@ public class Pouzivam3Sorty_3 {
         vypisovanie(B);
         System.out.print("Nacitajte riadok ktory chcete zoradit: ");
         int riadok = nacitanie();
-        B[riadok] = Sorty.bubbleSortOdNajmensieho(B[riadok]);
+        B[riadok] = Sorty.bubbleSortAscendingInt(B[riadok]);
         vypisovanie(B);
         System.out.print("Nacitajte riadok ktory chcete zoradit: ");
         riadok = nacitanie();
-        B[riadok] = Sorty.insertionSortOdNajmensieho(B[riadok]);
+        B[riadok] = Sorty.inertionSortAscending(B[riadok]);
         vypisovanie(B);
         B = vypocetHlavnejDiagonaly(B);
         vypisovanie(B);

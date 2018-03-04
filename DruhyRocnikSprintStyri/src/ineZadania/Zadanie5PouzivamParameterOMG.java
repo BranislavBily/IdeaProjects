@@ -47,7 +47,7 @@ public class Zadanie5PouzivamParameterOMG {
         Point index = new Point();
         for (int i = 0; i < F.length; i++) {
             //TODO Binarne si vyzaduje mat zoradene pole takze to by sa oplatilo niekedy implementovat
-            int found = Vyhladavania.binarySearch(F[i], 0, F[i].length - 1, yearnedNumber);
+            int found = Vyhladavania.binarySearchInt(F[i], 0, F[i].length - 1, yearnedNumber);
             if(found != -1) {
                 index.setLocation(i, found);
                 return index;
@@ -58,7 +58,7 @@ public class Zadanie5PouzivamParameterOMG {
     public static Point findElementLineary(int yearnedNumber) {
         Point index = new Point();
         for (int i = 0; i < F.length; i++) {
-            int found = Vyhladavania.linearSearch(F[i], yearnedNumber);
+            int found = Vyhladavania.linearSeachInt(F[i], yearnedNumber);
             if(found != -1) {
                 index.setLocation(i, found);
                 return index;

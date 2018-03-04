@@ -17,7 +17,7 @@ public class Zadanie1Zoradovanie {
             pole[i] = nacitanieCisla();
         }
         vypis();
-        pole = Sorty.quickSortOdNajvacsieho(pole, 0, pole.length - 1);
+        pole = Sorty.quickSort(pole, 0, pole.length - 1);
         System.out.println("Pole bolo zoradene.");
         vypis();
     }

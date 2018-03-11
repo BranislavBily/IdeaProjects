@@ -30,7 +30,6 @@ public class MameZiakovBezClassy {
                 sucet += aktualneCislo;
                 if( aktualneCislo > max) max = aktualneCislo;
                 else if (aktualneCislo < min) min = aktualneCislo;
-
             }
             AP = (double) Math.round(sucet / ziaci[i].length * 100) / 100;
             System.out.println("Aritmeticky priemer "+i+". ziaka je: "+AP+", jeho najhorsia znamka je: "+max+", jeho najlepsia " +

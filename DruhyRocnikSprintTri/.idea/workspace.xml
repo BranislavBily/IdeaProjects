@@ -12,7 +12,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MameZiakov.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MameZiakov.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/bonusovky/MameZiakov.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="204">
@@ -27,16 +27,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MameZiakovBezClassy.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/bonusovky/MameZiakovBezClassy.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1054">
-              <caret line="62" column="0" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="eulerovoSitoCiCo.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/bonusovky/eulerovoSitoCiCo.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -47,10 +37,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="finalUloha.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="finalUloha.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/bonusovky/finalUloha.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
+            <state relative-caret-position="459">
               <caret line="27" column="5" lean-forward="false" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
               <folding />
             </state>
@@ -151,12 +141,18 @@
         <option value="$PROJECT_DIR$/src/bonusovky/chcemSvojuSustavu.java" />
         <option value="$PROJECT_DIR$/src/ZakladneUlohy/hodOstepomJuChytilSaJejNejakPaciTenKoncept_9.java" />
         <option value="$PROJECT_DIR$/src/bonusovky/eulerovoSitoCiCo.java" />
-        <option value="$PROJECT_DIR$/src/bonusovky/MameZiakovBezClassy.java" />
         <option value="$PROJECT_DIR$/src/ZakladneUlohy/BufferedReader.java" />
         <option value="$PROJECT_DIR$/src/ZakladneUlohy/MenimVStlpciAVRiadku_6.java" />
         <option value="$PROJECT_DIR$/src/bonusovky/finalUloha.java" />
+        <option value="$PROJECT_DIR$/src/bonusovky/MameZiakovBezClassy.java" />
       </list>
     </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
@@ -216,9 +212,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -241,6 +235,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -249,6 +245,8 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -468,8 +466,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1513710281520</updated>
+      <workItem from="1520778759871" duration="81000" />
+      <workItem from="1520778906762" duration="289000" />
+      <workItem from="1520779743277" duration="309000" />
+      <workItem from="1520780466866" duration="794000" />
     </task>
     <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="1473000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -487,7 +492,8 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33509833" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35627836" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -530,6 +536,9 @@
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
     </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -912,27 +921,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/bonusovky/MameZiakov.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding>
-            <element signature="method#nacitanie#0;class#MameZiakov#0" expanded="false" />
-            <element signature="method#vypocetAP#0;class#MameZiakov#0" expanded="false" />
-            <element signature="method#vypocetNajhorsejZnamky#0;class#MameZiakov#0" expanded="false" />
-            <element signature="method#vypis#0;class#MameZiakov#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/bonusovky/MameZiakovBezClassy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1054">
-          <caret line="62" column="0" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ZakladneUlohy/BufferedReader.java" />
     <entry file="file://$PROJECT_DIR$/src/ZakladneUlohy/VymenaIAJPrvku_7.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -950,9 +938,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/bonusovky/finalUloha.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
+        <state relative-caret-position="459">
           <caret line="27" column="5" lean-forward="false" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bonusovky/MameZiakovBezClassy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="577">
+          <caret line="37" column="5" lean-forward="true" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bonusovky/MameZiakov.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding>
+            <element signature="method#nacitanie#0;class#MameZiakov#0" expanded="false" />
+            <element signature="method#vypocetAP#0;class#MameZiakov#0" expanded="false" />
+            <element signature="method#vypocetNajhorsejZnamky#0;class#MameZiakov#0" expanded="false" />
+            <element signature="method#vypis#0;class#MameZiakov#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

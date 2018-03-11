@@ -11,13 +11,11 @@ import tasks.Sort;
  * This code is proprietary and confidential of the person stated bellow
  * Created by Branislav Bilý on 03.03.2018
  * If you are confused, feel free to ask me <branislav.bily@gmail.com>
- * TOTO VELMI NEFUNGUJE NEBRAL BY SOM TO VELMI AKO PRIKLAD AK NEDOKONCIS TODO
  */
 public class Task5UsingParameter {
-    static double F[][] = new double[5][4];
 
     public static void main(String[] args) {
-        generatingIntoArray();
+        int[][] F = generatingIntoArray();
         for (int i = 0; i < F.length; i++) {
             for (int j = 0; j < F[i].length; j++) {
                 System.out.print(F[i][j]+" ");
@@ -29,29 +27,35 @@ public class Task5UsingParameter {
 
         int number = sc.nextInt();
 
-        Point indexBinary = findElementBinary(number);
-        Point indexLineary = findElementLineary(number);
+        Point indexLineary = findElementLineary(F, number);
+        Point indexBinary = findElementBinary(F, number);
 
         output(indexBinary, indexLineary);
     }
 
-    public static void generatingIntoArray() {
+    public static int[][] generatingIntoArray() {
+        int F[][] = new int[5][4];
         for (int i = 0; i < F.length; i++) {
             for (int j = 0; j < F[i].length; j++) {
                 double generatedNumber = Math.random() * 200 - 100;
                 F[i][j] = (int) generatedNumber;
             }
         }
+        return F;
     }
 
-    public static Point findElementBinary (int yearnedNumber) {
+    public static Point findElementBinary (int[][] F, int yearnedNumber) {
         Point indexes = new Point();
         for (int i = 0; i < F.length; i++) {
-            double sortedArray[] =  F[i];
-            sortedArray= Sort.quickSortDouble(F[i], 0, sortedArray.length);
-            int indexInSortedArray = Search.binarySearchDouble(sortedArray, 0, sortedArray.length -1, yearnedNumber);
+            int sortedArray[] = new int[4];
+            for (int j = 0; j < F[i].length; j++) {
+                sortedArray[j] = F[i][j];
+            }
+            sortedArray = Sort.quickSort(sortedArray, 0, sortedArray.length );
+            int indexInSortedArray = Search.binarySearchInt
+                                     (sortedArray, 0, sortedArray.length -1, yearnedNumber);
             if(indexInSortedArray != -1) {
-                int locationInUnsortedArray= (int) Search.linearSearchDouble(F[i], sortedArray[indexInSortedArray]);
+                int locationInUnsortedArray = Search.linearSearchInt(F[i], sortedArray[indexInSortedArray]);
                 indexes.setLocation(i, locationInUnsortedArray);
                 return indexes;
             }
@@ -59,10 +63,10 @@ public class Task5UsingParameter {
         return null;
     }
 
-    public static Point findElementLineary(int yearnedNumber) {
+    public static Point findElementLineary(int[][] F, int yearnedNumber) {
         Point index = new Point();
         for (int i = 0; i < F.length; i++) {
-            double found = Search.linearSearchDouble(F[i], yearnedNumber);
+            int found = Search.linearSearchInt(F[i], yearnedNumber);
             if(found != -1) {
                 index.setLocation(i, found);
                 return index;

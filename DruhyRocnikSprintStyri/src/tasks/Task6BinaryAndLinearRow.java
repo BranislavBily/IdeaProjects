@@ -17,30 +17,24 @@ import java.io.InputStreamReader;
 public class Task6BinaryAndLinearRow {
 
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-    static int F[][] = inicializationOf2DArray(5, 4);
+    static int F [][] = new int[5][4];
 
     public static void main(String[] args) throws IOException {
         F = generationOfNumbers();
         output();
         System.out.print("Input number you are searching for: ");
         int searchedNumber = inputOfNumber();
-        Point indexBinary = Task5UsingParameter.findElementBinary(searchedNumber);
-        Point indexLineary = Task5UsingParameter.findElementLineary(searchedNumber);
-    }
-    
-    public static int[][] inicializationOf2DArray(int rows, int columns) {
-        int array[][] = new int[rows][columns];
-        return array;
+        Point indexBinary = Task5UsingParameter.findElementBinary(F, searchedNumber);
+        Point indexLineary = Task5UsingParameter.findElementLineary(F, searchedNumber);
+        Task5UsingParameter.output(indexBinary, indexLineary);
     }
     
     public static int[][] generationOfNumbers() {
         int array[][] = new int[5][4];
-        for (int row[] :
-                array) {
-            for (int number :
-                    row) {
-                double generatedNumber = Math.random() * 200 - 100;
-                number = (int) generatedNumber;
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array[i].length; j++) {
+                double generatedNumber =  Math.random() * 200 - 100;
+                array[i][j] = (int) generatedNumber;
             }
         }
         return array;
@@ -61,7 +55,4 @@ public class Task6BinaryAndLinearRow {
         return Integer.parseInt(br.readLine());
     }
 
-
-
-    
 }

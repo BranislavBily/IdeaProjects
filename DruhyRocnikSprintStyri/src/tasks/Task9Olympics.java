@@ -20,7 +20,7 @@ public class Task9Olympics {
     static double[] longestThrow;
 
     public static void main(String[] args) throws IOException {
-        initializingArray();
+        initializingArrays();
         int[] indexesOfFinalists = fillWithIndexes();
         letsPlay(athletes.length, indexesOfFinalists);
         indexesOfFinalists = indexesOfFinalists();
@@ -29,7 +29,7 @@ public class Task9Olympics {
         results();
     }
 
-    public static void initializingArray() throws IOException {
+    public static void initializingArrays() throws IOException {
         System.out.print("Input number of athletes: ");
         athletes = new double[Integer.parseInt(br.readLine())][6];
         AM = new double[athletes.length];

@@ -73,10 +73,6 @@ public class MameZiakov {
     }
 
     public static void main(String[] args){
-        //int ziaci[][] = nacitanie();
-        //double AP[] = vypocetAP(ziaci);
-        //int najhorsieZnamky [] = vypocetNajhorsejZnamky(ziaci);
-        //vypis(ziaci, AP, najhorsieZnamky);
         ziaci = new ArrayList<>();
         Scanner sc = new Scanner(System.in);
         System.out.print("Nacitajte pocet ziakov: ");

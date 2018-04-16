@@ -17,7 +17,7 @@ public class Task1Sorting {
             array[i] = numberInput();
         }
         output();
-        array = Sort.quickSort(array, 0, array.length - 1);
+        array = Sort.quickSort(array, 0, array.length);
         System.out.println("Pole bolo zoradene.");
         output();
     }

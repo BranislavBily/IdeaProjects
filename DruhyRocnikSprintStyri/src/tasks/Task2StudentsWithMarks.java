@@ -27,12 +27,11 @@ public class Task2StudentsWithMarks {
         return result;
     }
 
-    public static void printingStudentBasedOnAM(double AM[], double sortedAM[]) {
+    public static void printingStudentBasedOnAM(double AM[][]) {
         int indexOfStudent;
         for (int i = 0; i < AM.length; i++) {
-            indexOfStudent = (int) Search.linearSearchDouble(AM, sortedAM[i]);
             System.out.println();
-            System.out.printf("%1d. student was student number %1d with AM of %.2f", i, indexOfStudent, sortedAM[i]);
+            System.out.printf("%1d. student was student number %1d with AM of %.2f", i,(int)AM[i][0], AM[i][1]);
         }
     }
 
@@ -52,13 +51,36 @@ public class Task2StudentsWithMarks {
                 }
             }
         }
-        double AM[] = new double[studentsAndMarks.length];
+        double AM[][] = new double[studentsAndMarks.length][2];
         for (int i = 0; i < AM.length; i++) {
-            AM[i] = calculationOfAritheticMean(studentsAndMarks[i]);
+            AM[i][0] = i;
+            AM[i][1] = calculationOfAritheticMean(studentsAndMarks[i]);
         }
-        double sortedAM[] = Sort.bubbleSortAscending(AM.clone());
-        for (int i = 0; i < sortedAM.length; i++) {
+        AM = bubbleSortBois(AM);
+        printingStudentBasedOnAM(AM);
+    }
+
+    public static double[][] swap(double[][] AM, int i, int j) {
+        double tmp = AM[j][0];
+        AM[j][0] = AM[j + 1][0];
+        AM[j + 1][0] = tmp;
+        tmp = AM[j][1];
+        AM[j][1] = AM[j + 1][1];
+        AM[j + 1][1] = tmp;
+        return AM;
+    }
+
+    public static double[][] bubbleSortBois(double[][] AM) {
+        boolean change = false;
+        for (int i = 0; i < AM.length - 1; i++) {
+            for (int j = 0; j < AM.length - i - 1; j++) {
+                if (AM[j][1] < AM[j + 1][1]) {
+                    AM = swap(AM, i, j);
+                    change = true;
+                }
+            }
+            if (!change) break;
         }
-        printingStudentBasedOnAM(AM, sortedAM);
+        return AM;
     }
 }

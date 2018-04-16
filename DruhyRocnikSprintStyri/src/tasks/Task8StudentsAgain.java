@@ -30,15 +30,15 @@ public class Task8StudentsAgain {
         int amountOfStudents = sc.nextInt(), amountOfMarks;
         students = new int[amountOfStudents][];
         names = new String[amountOfStudents];
-        for(int i = 0; i < amountOfStudents; i++) {
+        for (int i = 0; i < amountOfStudents; i++) {
             System.out.print("Input name of student: ");
             names[i] = sc.next();
-            System.out.print("Input amount of marks of "+names[i]+": ");
+            System.out.print("Input amount of marks of " + names[i] + ": ");
             amountOfMarks = sc.nextInt();
             students[i] = new int[amountOfMarks];
             for (int j = 0; j < amountOfMarks; j++) {
                 j++;
-                System.out.print("Input "+j+". mark "+names[i]+". student: ");
+                System.out.print("Input " + j + ". mark " + names[i] + ". student: ");
                 j--;
                 students[i][j] = sc.nextInt();
             }
@@ -53,7 +53,7 @@ public class Task8StudentsAgain {
             double sum = 0;
             for (int j = 0; j < students[i].length; j++) {
                 sum += students[i][j];
-                if( students[i][j] > max[i]) {
+                if (students[i][j] > max[i]) {
                     max[i] = students[i][j];
                 }
             }
@@ -66,10 +66,10 @@ public class Task8StudentsAgain {
         System.out.print("Input AM you want to find student to???: ");
         double userFindingThisAM = sc.nextDouble();
         int index = Search.linearSearchDouble(AM, userFindingThisAM);
-        if(index == -1) {
+        if (index == -1) {
             System.out.print("There's no student with this AM.");
         } else {
-            System.out.print("Student named "+names[index]+" has AM of"+AM[index]);
+            System.out.print("Student named " + names[index] + " has AM of" + AM[index]);
             if (AM[index] <= 1.5 && max[index] <= 2) {
                 System.out.print(", he PV.");
             } else if (AM[index] <= 2 && max[index] <= 3) {
@@ -82,4 +82,3 @@ public class Task8StudentsAgain {
         }
     }
 }
-

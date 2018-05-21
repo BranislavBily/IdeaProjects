@@ -22,10 +22,9 @@ public class Task1Sorting {
         output();
     }
 
-    public static int numberInput(){
+    public static int numberInput() {
         double generatedNumber = Math.random() * 100;
-        int number = (int)generatedNumber;
-        return number;
+        return (int) generatedNumber;
     }
 
     public static void output() {
@@ -34,7 +33,7 @@ public class Task1Sorting {
                 System.out.printf("%4d ", array[i * 10 + j]);
             }
             System.out.println();
+
         }
     }
-
 }
